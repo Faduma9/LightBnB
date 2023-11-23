@@ -9,7 +9,8 @@ const pool = new Pool({
   database: 'lightbnb'
 });
 
-pool.query(SELECT title FROM properties LIMIT 10;).then(response => {})
+pool.query(`SELECT title FROM properties LIMIT 10;`).then(response => {(response)})
+
 /// Users
 
 /**
@@ -163,6 +164,7 @@ const getAllProperties = function (options, limit = 10) {
 
   return pool.query(queryString, queryParams).then((res) => res.rows);
 };
+
 /**
  * Add a property to the database
  * @param {{}} property An object containing all of the property details.
